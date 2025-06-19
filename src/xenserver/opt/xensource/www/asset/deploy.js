@@ -114,26 +114,30 @@ function deploy() {
   const status = (text) => (document.querySelector("#deploy").innerText = text);
   document.querySelector(".spinner").style.display = "inherit";
   const srRef = document.querySelector("#srs").value;
-  status("Deploying XOA…");
+  status("Deploying Nephora XOA");
   document.querySelector("#accounts fieldset").setAttribute("disabled", true);
-  let registrationToken;
-  const updaterEmail = document.querySelector("#updaterEmail").value;
-  const updaterPwd = document.querySelector("#updaterPwd").value;
+  // let registrationToken;
+  // const updaterEmail = document.querySelector("#updaterEmail").value;
+  // const updaterPwd = document.querySelector("#updaterPwd").value;
+  let downloadUrl = document.querySelector("#downloadUrl").value;
+  // TODO: download ISO with user and pass
+  let downloadEmail = document.querySelector("#downloadEmail").value;
+  let downloadPwd = document.querySelector("#downloadPwd").value;
   Promise.resolve()
-    .then(() => {
-      if (updaterEmail && updaterPwd) {
-        return _jsonRpcCall("https://xen-orchestra.com/api", "registerXoa", {
-          email: updaterEmail,
-          password: updaterPwd,
-        }).then((_registrationToken) => {
-          registrationToken = _registrationToken;
-        });
-      }
-    })
+    // .then(() => {
+    //   if (updaterEmail && updaterPwd) {
+    //     return _jsonRpcCall("https://xen-orchestra.com/api", "registerXoa", {
+    //       email: updaterEmail,
+    //       password: updaterPwd,
+    //     }).then((_registrationToken) => {
+    //       registrationToken = _registrationToken;
+    //     });
+    //   }
+    // })
     .then(() =>
       call(
         "VM.import",
-        "http://xoa.io:8888/",
+        downloadUrl,
         srRef,
         false, // full_restore
         false // force
@@ -157,9 +161,9 @@ function deploy() {
       if (email && password) {
         promises.push(call("VM.add_to_xenstore_data", vmRef, "vm-data/admin-account", JSON.stringify({ email, password })));
       }
-      if (registrationToken) {
-        promises.push(call("VM.add_to_xenstore_data", vmRef, "vm-data/xoa-updater-credentials", JSON.stringify({ email: updaterEmail, registrationToken })));
-      }
+      // if (registrationToken) {
+      //   promises.push(call("VM.add_to_xenstore_data", vmRef, "vm-data/xoa-updater-credentials", JSON.stringify({ email: updaterEmail, registrationToken })));
+      // }
       const xoaPwd = document.querySelector("#xoaPwd").value;
       if (xoaPwd) {
         promises.push(call("VM.add_to_xenstore_data", vmRef, "vm-data/system-account-xoa-password", xoaPwd));
