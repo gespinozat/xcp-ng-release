@@ -6,8 +6,9 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Welcome to XCP-ng @PRODUCT_VERSION@</title>
+  <title>Welcome to Nephora</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="asset/deploy.js"></script>
   <link rel="stylesheet" href="asset/flexboxgrid.min.css" type="text/css" />
   <link rel="stylesheet" href="asset/icons-font/icons.css" />
   <link rel="icon" type="image/png" href="asset/favicon.png" />
@@ -16,81 +17,28 @@
 
 <body>
   <div class="wrap container-fluid">
-    <div>
-      <h2 class="title">Welcome to XCP-ng @PRODUCT_VERSION@</h2>
-      <div class="row">
-        <div class="col-xs">
-          <a href="https://xcp-ng.org/docs/" class="btn">Documentation</a>
-          <a href="https://xcp-ng.org/blog/" class="btn" style="background-color:#263740">Latest News</a>
-        </div>
-      </div>
-    </div>
-    <hr />
+    <img class="logo" src="./asset/logo_white.svg" alt="Nephora">
     <div class="section">
-      <h3 class="subtitle">Management tools</h3>
-      <p>
-        You have various options to manage your XCP-ng - choose the one that
-        fits best!
-      </p>
       <div class="row">
-        <div class="col-md">
+        <div class="col-md m-5">
           <div class="box">
-            <h4>Xen Orchestra</h4>
-            <a href="https://vates.tech/deploy"><img class="preview" src="./asset/xoa.jpg" alt="Xen Orchestra" /></a>
-            <p class="options">
-              <span class="tooltip">
-                <a href="https://xen-orchestra.com/#!/xo-features/webinterface?pk_campaign=xcp-ng-html"
-                  class="text-decoration-none">
-                  <i class="icon icon-browser" style="font-size: 1.3em;" title="Web based icon"></i>
-                  <span class="tooltiptext">Web based</span>
-                </a>
-              </span>
-              <span class="tooltip">
-                <a href="https://github.com/vatesfr/xen-orchestra" class="text-decoration-none">
-                  <i class="icon icon-git" style="font-size: 1.5em;" title="Open source icon"></i>
-                  <span class="tooltiptext">Open Source</span>
-                </a>
-              </span>
-              <span class="tooltip">
-                <a href="https://xen-orchestra.com/#!/xo-home?pk_campaign=xcp-ng-html" class="text-decoration-none">
-                  <i class="icon icon-user-headset" style="font-size: 1.5em;" title="headset icon"></i>
-                  <span class="tooltiptext">Pro Support available</span>
-                </a>
-              </span>
-            </p>
+            <h3 class="subtitle">Nephora XO</h4>
+            <a href="#ex1" rel="modal:open"><img class="preview" src="./asset/xoa.jpg" alt="Nephora XO" /></a>
             <p class="management">
               XO comes in a virtual appliance (XOA) covering all the management,
               backup and cloud features you may need in your infrastructure,
               directly from your web browser.
             </p>
             <p>
-              <a href="https://vates.tech/deploy" class="btn">Quick deploy</a>
+              <a href="#ex1" class="btn" rel="modal:open">Quick deploy</a>
             </p>
           </div>
         </div>
-        <div class="col-md">
+        <div class="col-md m-5">
           <div class="box">
-            <h4>xe CLI</h4>
+            <h3 class="subtitle">xe CLI</h4>
             <a href="https://xcp-ng.org/docs/cli_reference.html"><img class="preview" src="./asset/xecli.jpg"
                 alt="Xe Cli" /></a>
-            <p class="options">
-              <span class="tooltip">
-                <i class="icon icon-browser" style="font-size: 1.3em; color: #263740;"></i>
-                <span class="tooltiptext">CLI only</span>
-              </span>
-              <span class="tooltip">
-                <a href="https://github.com/xapi-project/xen-api" class="text-decoration-none">
-                  <i class="icon icon-git" style="font-size: 1.5em;"></i>
-                  <span class="tooltiptext">Open Source</span>
-                </a>
-              </span>
-              <span class="tooltip">
-                <a href="https://xcp-ng.com?pk_campaign=xe-xcp-ng-html" class="text-decoration-none">
-                  <i class="icon icon-user-headset" style="font-size: 1.5em;"></i>
-                  <span class="tooltiptext">Pro Support available</span>
-                </a>
-              </span>
-            </p>
             <p class="management">
               xe CLI is a powerful command line interface available on this host. You can do any XCP-ng operation from
               there. To learn more about it, please read our documentation.
@@ -102,54 +50,131 @@
         </div>
       </div>
     </div>
-    <hr />
-    <div class="section">
-      <h3 class="subtitle">Pro Support</h3>
-      <p>
-        XCP-ng is a high performance enterprise level hypervisor, responding
-        to the most demanding company activities from SMBs to Datacenters. We
-        have your back when it comes to pro support. Visit our dedicated
-        website to learn more.
-      </p>
-      <div class="row">
-        <div class="col-xs">
-          <div class="support">
-            <a href="https://xcp-ng.com?pk_campaign=xcp-ng-html" class="text-decoration-none">
-              <i class="icon icon-user-headset"></i></a>
-            <p class="description">Pro Support 24/7/365</p>
-          </div>
-        </div>
-        <div class="col-xs">
-          <div class="support">
-            <a href="https://xcp-ng.com?pk_campaign=xcp-ng-html" class="text-decoration-none">
-              <i class="icon icon-terminal"></i></a>
-            <p class="description">SSH remote support</p>
-          </div>
-        </div>
-        <div class="col-xs">
-          <div class="support">
-            <a href="https://xcp-ng.com?pk_campaign=xcp-ng-html" class="text-decoration-none">
-              <i class="icon icon-wrench"></i></a>
-            <p class="description">Setup assistance</p>
-          </div>
-        </div>
-      </div>
-      <p>
-        <a href="https://xcp-ng.com?pk_campaign=xcp-ng-html" class="btn">Go Pro</a>
-      </p>
-    </div>
-    <hr />
-    <div class="section">
-      <h3 class="subtitle">Join our community</h3>
-      <p class="description">
-        Thousands of people are using XCP-ng, hundreds are contributing on our
-        community forum. Become a part of our community!
-      </p>
-      <p>
-        <a href="https://xcp-ng.org/forum" class="btn">Community forum</a>
-      </p>
+    <!-- Modalcontent -->
+    <div id="ex1" class="modal">
+      <h3 class="subtitle">Nephora XO - Quick deploy</h3>
+      <p style="font-size: small;">This will download and deploy a new virtual machine on your host, called "XOA" (Xen
+        Orchestra virtual Appliance).</p>
+      <form id="connect" onsubmit="event.preventDefault(); connect()">
+        <fieldset>
+          <p>
+            <label>
+              Host username<br />
+              <input type="text" disabled value="root" />
+            </label>
+          </p>
+          <p>
+            <label>
+              Host password<br />
+              <input type="password" id="pwd" />
+            </label>
+          </p>
+          <p>
+            <em><i class="fas fa-info-circle"></i> This host's root
+              credentials</em>
+          </p>
+          <p><button class="btn" type="submit">Connect</button></p>
+        </fieldset>
+      </form>
+      <form id="config" onsubmit="event.preventDefault(); submitConfig()" style="display: none">
+        <fieldset>
+          <p>
+            <label>
+              Select a storage<br />
+              <select id="srs"></select>
+            </label>
+          </p>
+          <p>
+            <label>
+              Select a network<br />
+              <select id="networks"></select>
+            </label>
+          </p>
+          <p id="ip-error" style="display: none">
+            <em class="danger"><i class="fas fa-exclamation-triangle"></i>
+              <span>You entered the same IP address as your host. Please choose a
+                different one for your XOA:</span></em>
+          </p>
+          <p>
+            <label>
+              XOA VM IP address<br />
+              <input type="text" id="ip" />
+            </label>
+          </p>
+          <p>
+            <label>
+              Netmask<br />
+              <input type="text" placeholder="255.255.255.0" id="netmask" />
+            </label>
+          </p>
+          <p>
+            <label>
+              Gateway<br />
+              <input type="text" id="gateway" />
+            </label>
+          </p>
+          <p>
+            <label>
+              DNS<br />
+              <input type="text" placeholder="8.8.8.8" id="dns" />
+            </label>
+          </p>
+          <p>
+            <em><i class="fas fa-info-circle"></i> Leave everything empty to
+              use DHCP. Provide all the information otherwise.</em>
+          </p>
+          <p><button class="btn" type="submit">Next</button></p>
+        </fieldset>
+      </form>
+      <form id="accounts" onsubmit="event.preventDefault(); deploy()" style="display: none">
+        <fieldset>
+          <h4>Create an Admin account on your XOA</h4>
+          <p>
+            <label>
+              Username<br />
+              <input type="text" placeholder="admin@admin.net" id="adminEmail" /> </label><br />
+            <label>
+              Password<br />
+              <input type="password" placeholder="admin" id="adminPwd" />
+            </label>
+          </p>
+          <h4>Register your XOA</h4>
+          <p>
+            <a href="https://xen-orchestra.com/#!/signup" target="_blank">Create an account</a>
+          </p>
+          <p>
+            <label>
+              xen-orchestra.com username<br />
+              <input type="text" id="updaterEmail" /> </label><br />
+            <label>
+              xen-orchestra.com password<br />
+              <input type="password" id="updaterPwd" />
+            </label>
+          </p>
+          <h4>Set the XOA machine password</h4>
+          <p>
+            <label>
+              Login<br />
+              <input type="text" disabled value="xoa" /> </label><br />
+            <label>
+              Password<br />
+              <input type="password" placeholder="Account disabled if empty" id="xoaPwd" />
+            </label>
+          </p>
+          <p>
+            <em><i class="fas fa-info-circle"></i> You can do this later</em>
+          </p>
+          <p>
+            <button class="btn" type="submit">
+              <i class="spinner" style="display: none;"></i>
+              <span id="deploy">Deploy</span>
+            </button>
+          </p>
+        </fieldset>
+      </form>
+      <br />
+      <a href="#" rel="modal:close">Close</a>
     </div>
   </div>
 </body>
-
 </html>
